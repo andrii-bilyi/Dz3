@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання квитків на поїзд</title>
+    <link rel="stylesheet" href="Style6.css">
+</head>
+<body>
+    <form class="bookingTickets">
+        <h1>Бронювання квитків на поїзд</h1>
+
+        <h2>Виберіть напрямок та дату поїздки:</h2>
+        <label for="direction">Напрямок:</label>
+        <select id="direction">
+            <option value="Київ - Львів">Київ - Львів</option>
+            <option value="Львів - Київ">Львів - Київ</option>
+        </select>
+    
+        <label for="date">Дата поїздки:</label>
+        <input type="date" id="date">
+
+        <button type="button" onclick="Search()">Пошук</button>
+
+        <div id="places" style="display: none;">
+            <h2>Виберіть місця для бронювання:</h2>
+            <div id="seats">
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="1"> 1
+                    <input type="checkbox" class="seat" value="3"> 3
+                    <input type="checkbox" class="seat" value="2"> 2
+                    <input type="checkbox" class="seat" value="4"> 4                    
+                </div>
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="5"> 5
+                    <input type="checkbox" class="seat" value="7"> 7
+                    <input type="checkbox" class="seat" value="6"> 6
+                    <input type="checkbox" class="seat" value="8"> 8
+                </div>
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="9"> 9
+                    <input type="checkbox" class="seat" value="11">11
+                    <input type="checkbox" class="seat" value="10">10
+                    <input type="checkbox" class="seat" value="12">12
+                </div>
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="13">13
+                    <input type="checkbox" class="seat" value="15">15
+                    <input type="checkbox" class="seat" value="14">14
+                    <input type="checkbox" class="seat" value="16">16
+                </div>
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="17">17
+                    <input type="checkbox" class="seat" value="19">19
+                    <input type="checkbox" class="seat" value="18">18
+                    <input type="checkbox" class="seat" value="20">20
+                </div>
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="21">21
+                    <input type="checkbox" class="seat" value="23">23
+                    <input type="checkbox" class="seat" value="22">22
+                    <input type="checkbox" class="seat" value="24">24
+                </div>
+                <div class="compartment">
+                    <input type="checkbox" class="seat" value="25">25
+                    <input type="checkbox" class="seat" value="27">27
+                    <input type="checkbox" class="seat" value="26">26
+                    <input type="checkbox" class="seat" value="28">28
+                </div>                
+            </div>
+            <button type="button" onclick="bookTickets()">Забронювати квитки</button>
+        </div>
+    </form>
+
+    <ul id="bookedTickets">
+        <h2>Заброньовані квитки:</h2>
+        <!-- Тут будуть відображатися заброньовані квитки -->
+    </ul>
+
+    <script>
+        const bookedTickets = [];
+
+        function Search() {
+            document.getElementById('places').style.display = 'block';
+        }
+        function bookTickets() {
+            const direction = document.getElementById('direction').value;
+            const date = document.getElementById('date').value;
+            const selectedSeats = document.querySelectorAll('.seat:checked');
+            const selectedSeatsValues = Array.from(selectedSeats).map(seat => seat.value);
+
+            const bookingInfo = `Напрямок: ${direction}, Дата: ${date}, Місця: ${selectedSeatsValues.join(', ')}`;
+            bookedTickets.push(bookingInfo);
+
+            const bookedTicketsList = document.getElementById('bookedTickets');
+            const listItem = document.createElement('li');
+            listItem.textContent = bookingInfo;
+            bookedTicketsList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

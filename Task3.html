@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилізований текст</title>
+    <link rel="stylesheet" href="Style3.css">
+</head>
+
+<body>
+    <div class="inText">
+        
+        <form id="textForm">           
+            
+            <ul class="options">
+                <li>
+                    <input type="checkbox" id="bold">
+                    <label for="bold">Bold</label>                    
+                </li>
+                <li>
+                    <input type="checkbox" id="underline">
+                    <label for="underline">Underline</label>                    
+                </li>
+                <li>
+                    <input type="checkbox" id="italics">
+                    <label for="italics">Italics</label>                    
+                </li>
+                <li>
+                    <input type="radio" name="textAlign" id="leftAlign" value="left" checked>
+                    <label for="leftAlign">left</label>                                        
+                </li>
+                <li>
+                    <input type="radio" name="textAlign" id="rightAlign" value="right">
+                    <label for="rightAlign">right</label>                    
+                </li>
+                <li>
+                    <input type="radio" name="textAlign" id="justifyAlign" value="center">
+                    <label for="justifyAlign">justify</label>                    
+                </li>
+            </ul>
+            
+            <textarea id="inputText" rows="8" cols="50" required></textarea>    
+            <button type="button" onclick="applyStyles()">Show text</button>
+        </form>
+    </div>        
+
+    <div>
+        <h2>Result:</h2>
+        <div id="outputText"></div>
+    </div>
+
+    <script src="Script3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+*{
+    /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;   
+    background-color: rgb(122, 191, 228);
+    font-size: 18px;    
+}
+
+#quizForm {
+    margin: 100px auto; 
+    background-color: bisque;
+    width: 60%;
+    text-align: center;
+    border-radius: 15px;
+    padding: 50px;
+}
+
+button {
+    font-size: 18px;
+    padding: 5px 40px;
+    background-color: aquamarine;   
+    border-radius: 10px; 
+}
+
+button:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.start {
+    display: block;
+}
+
+.question {
+    display: none;
+}

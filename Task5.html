@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відмітити присутніх</title>
+    <link rel="stylesheet" href="Style5.css">
+</head>
+<body>
+    <form id="SelectedGroup">
+        <div class="form-group">
+            <label for="group">Група:</label>
+            <select id="group">
+                <option value="group1">Група 1</option>
+                <option value="group2">Група 2</option>
+            </select>
+
+            <label for="pair">Оберіть пару:</label>
+            <select id="pair">
+                <option value="pair1">Пара 1</option>
+                <option value="pair2">Пара 2</option>
+                <option value="pair3">Пара 3</option>
+            </select>
+
+            <button type="button" onclick="loadStudents()">Вибір</button>
+        </div>
+        
+        <div id="studentsList" style="display: none;">
+
+            <label for="topic">Тема заняття:</label>
+            <input type="text" id="topic">
+
+            <p><b>Список студентів:</b>  <b>Присутність:</b></p>
+            <ul id="students"></ul>            
+
+            <!-- <label>Присутні:</label>
+            <div id="attendance-checkboxes"></div> -->
+
+            <button class="buttonSave" type="button" onclick="saveAttendance()">Зберегти присутніх</button>
+        </div>        
+        
+    </form>
+
+    <ul id="attendanceList"></ul>
+    
+    <script src="Script5.js"></script>
+</body>
+</html>

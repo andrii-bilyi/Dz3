@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин книг</title>
+    <link rel="stylesheet" href="Style4.css">
+</head>
+<body>    
+    <div class="listing">
+        <ul class="books">
+            <li class="book-block">
+                <div class="book-image">
+                    <img src="Книга «28_ Наступного літа в той самий час» – Элин Хильдербранд.jpg">                    
+                </div>                
+                <h3 class="book-name">Книга 28: Наступного літа в той самий час</h3>
+                <h4 class="book-author">Элин Хильдербранд</h4>                
+                <div class="price">
+                    <span>400 грн</span>  
+                </div>
+                <button type="button" onclick="setDefaultBook('28: Наступного літа в той самий час')">Обрати</button>
+            </li>
+            <li class="book-block">
+                <div class="book-image">
+                    <img src="Книга «Як ведмідь не проспав Різдво» – Карма Уилсон.jpg">                    
+                </div>                
+                <h3 class="book-name">Книга Як ведмідь не проспав Різдво</h3>
+                <h4 class="book-author">Карма Уилсон</h4>                
+                <div class="price">
+                    <span>320 грн</span>  
+                </div>
+                <button type="button" onclick="setDefaultBook('Як ведмідь не проспав Різдво')">Обрати</button>
+            </li>
+            <li class="book-block">
+                <div class="book-image">
+                    <img src="Книга «The Covenant of Water» – Абрахам Вергезе.jpg">                    
+                </div>                
+                <h3 class="book-name">Книга The Covenant of Water</h3>
+                <h4 class="book-author">Абрахам Вергезе</h4>                
+                <div class="price">
+                    <span>1015 грн</span>  
+                </div>
+                <button type="button" onclick="setDefaultBook('The Covenant of Water')">Обрати</button>
+            </li>
+            <li class="form-block">
+                <form id="bookOrderForm">
+                    <div class="form-group">
+                        <label class="form-label" for="book">Книга:</label>
+                        <div class="form-input" id="book" >Книгу не обрано</div>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="form-label" for="quantity">Кількість:</label>
+                        <input class="form-input" type="number" id="quantity" min="1" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="form-label" for="name">Ваше ім'я:</label>
+                        <input class="form-input" type="text" id="name" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="form-label" for="deliveryDate">Дата доставки:</label>
+                        <input class="form-input" type="date" id="deliveryDate" required>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="form-label" for="deliveryAddress">Адреса доставки:</label>                        
+                        <textarea class="form-input" id="deliveryAddress" rows="4" ></textarea>
+                    </div>
+            
+                    <div class="form-group">
+                        <label class="form-label" for="comment">Коментар:</label>
+                        <textarea class="form-input" id="comment" rows="8" ></textarea>
+                    </div>
+            
+                    <button type="button" onclick="placeOrder()">Замовити</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div id="orderConfirmation" style="display: none;">
+        <h2>Result:</h2>
+        <div id="outText"></div>
+    </div>    
+    <script src="Script4.js"></script>
+</body>
+</html>

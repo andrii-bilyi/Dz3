@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #c9c9c9;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;      
+}
+
+.listing{
+    width: 90%;
+    background-color: #f6edce;
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 20px 10px;
+    text-align: left;
+}
+
+.books{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    margin: 10px;     
+}
+.book-block{
+    display: inline-block; /* Делаем div внутрилинейным элементом */
+    width: 220px; 
+    cursor: pointer; 
+    margin: 10px;  
+    padding: 10px; 
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-block:hover .book-name{
+    color: orange;
+}
+
+.book-author{
+    color: #555555;
+}
+
+img{
+    width: 200px;
+    height: 300px;
+}
+.book-image{     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.price{
+    text-align: right;
+    font-weight: bold;
+}
+
+.form-block {
+    display: inline-block; 
+    width: 350px; 
+    cursor: pointer; 
+    margin: 10px;  
+    padding: 10px; 
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}   
+
+#bookOrderForm {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    flex: 1;
+    text-align: right;
+    padding-right: 5px;
+    align-self: center;
+}
+
+.form-input {
+    flex: 2;    
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#orderConfirmation {
+    width: 90%;
+    background-color: #f6edce;
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 20px 10px;
+    text-align: left;    
+}
+#outText {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+}
